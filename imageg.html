@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="image.css">
+</head>
+<body>
+
+  <h1 class="title">Image Gallery</h1>
+
+  <div class="filters">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('animals')">Animals</button>
+    <button onclick="filterImages('city')">City</button>
+  </div>
+
+  <div class="gallery">
+    <img src="https://picsum.photos/200/300" class="nature" onclick="openLightbox(this)">
+    <img src="https://picsum.photos/201/300" class="animals" onclick="openLightbox(this)">
+    <img src="https://picsum.photos/202/300" class="city" onclick="openLightbox(this)">
+    <img src="https://picsum.photos/203/300" class="nature" onclick="openLightbox(this)">
+    <img src="https://picsum.photos/204/300" class="animals" onclick="openLightbox(this)">
+    <img src="https://picsum.photos/205/300" class="city" onclick="openLightbox(this)">
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" class="lightbox-img">
+    <div class="lightbox-nav">
+      <button onclick="prevImage()">❮</button>
+      <button onclick="nextImage()">❯</button>
+    </div>
+  </div>
+
+  <script src="imageg.js"></script>
+</body>
+</html>
